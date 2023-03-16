@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-black">
+ 
+        <div class="sideBar_content  position-fixed d-flex  ">
+        <div class="movieCategory bg-black  ">
+            <nav class="navbar navbar-expand-lg  vh-100  d-flex  justify-content-between align-items-center">
+                <div class="container-fluid">
+                  <div id="navbarSupportedContent ">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex flex-column   ">
+                      <li class="nav-item py-1">
+                        <a class="nav-link  active text-white pe-5 " aria-current="page"  id ="movie/now_playing" href="#"> Now playing</a>
+                      </li>
+                      <li class="nav-item py-1">
+                        <a class="nav-link text-white pe-5 " id ="movie/popular" href="#">Popular</a>
+                      </li>
+                      <li class="nav-item py-1">
+                        <a class="nav-link text-white pe-5 " id ="movie/top_rated" href="#">Top Rated</a>
+                      </li>
+                      <li class="nav-item py-1">
+                        <a class="nav-link text-white pe-5" id ="trending/movie/week" href="#"> Trending</a>
+                      </li>
+                      <li class="nav-item py-1">
+                        <a class="nav-link text-white pe-5" id ="movie/upcoming" href="#"> Upcoming</a>
+                      </li>
+                      <li class="nav-item py-1">
+                        <a class="nav-link text-white pe-5"id="inTouch" href="#"> Contact Us</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="footerIcons   ">
+                    <ul class=" text-white d-flex ">
+                      <li class="list-unstyled p-3   "> <a> <i class="fab fa-facebook-f"></i></a>  </li>
+                      <li class="list-unstyled p-3"> <a> <i class="fa-solid fa-globe"></i></a> </li>
+                      <li class="list-unstyled p-3  "> <a> <i class="fab fa-twitter"></i></a> </li>
+                    </ul>
+                    <p> Copyright Â© 2019 All Rights <br> Reserved.</p>
+                    </div>
+              </nav>
+             
+        </div>
+        <div class="Icons bg-white  text-white  d-flex flex-column justify-content-between align-items-center vh-100 ">
+            <div class="logo text-center">
+                <img src="img/logo.png" alt="logo">
+            </div>
+            <li class="list-unstyled text-black"> <i class="fa-solid fa-bars fa-2xl toggle"></i></li>
+           <ul class="list-unstyled ">
+            <div class="last text-black ">
+                <li> <i class="fa-solid fa-globe  py-3"></i></li>
+                <li> <i class="fas fa-share-alt "></i></li>
+            </div>
+           </ul>
+        </div>
+    </div>    
+
+
+    <div class="container py-5 ">
+        <div class="row  ">
+            <div class="col-md-6 w-75  m-auto">
+                <div class="search d-flex  m-auto ">
+                    <input type="text" class="form-control border-bottom bg-transparent mx-5 text-center "  id="searchApi"placeholder="get movies by word">
+                    <input type="text" class="form-control border-bottom bg-transparent ms-2  text-center" placeholder="search..." onkeyup="search(this.value)" id="search">
+                </div>
+                
+            </div>
+        </div>
+        <div class="row  my-5 py-5" id="movieCard"> 
+        </div>
+        <div id="contactUs" class="my-5 p-5">
+            <h2 class="text-white fw-bold">Contact Us</h2>
+            <div class="row my-5">
+                <div class="col-md-6 my-3">
+                    <div class="form-group">
+                        <input class="form-control bg-transparent mb-1" id="name"
+                            placeholder="Enter Your Name"></input>
+                        <div id="nameAlert" class="alert alert-danger d-none">Your Name is not valid</div>
+                    </div>
+                </div>
+                <div class="col-md-6 my-3">
+                    <div class="form-group">
+                        <input class="form-control bg-transparent" id="email" placeholder="Enter Email"></input>
+                        <div id="emailAlert" class="alert alert-danger d-none">entre valid email</div>
+                    </div>
+                </div>
+                <div class="col-md-6 my-3">
+                    <div class="form-group">
+                        <input class="form-control bg-transparent" id="phone" placeholder="Enter Phone"></input>
+                        <div id="phoneAlert" class="alert alert-danger d-none">entre valid phone</div>
+                    </div>
+                </div>
+                <div class="col-md-6 my-3">
+                    <div class="form-group">
+                        <input class="form-control bg-transparent" id="age" placeholder="Enter Age"></input>
+                        <div id="ageAlert" class="alert alert-danger d-none">entre valid Age</div>
+                    </div>
+                </div>
+                <div class="col-md-6 my-3">
+                    <div class="form-group">
+                        <input class="form-control bg-transparent" id="pass"
+                            placeholder="Enter Password"></input>
+                        <div id="passAlert" class="alert alert-danger d-none">entre valid password *Minimum eight
+                            characters, at
+                            least one letter and one number:*</div>
+                    </div>
+                </div>
+                <div class="col-md-6 my-3">
+                    <div class="form-group">
+                        <input class="form-control bg-transparent" id="RePass"
+                            placeholder="Enter Repassword"></input>
+                        <div id="rePassAlert" class="alert alert-danger d-none">entre valid RePassword</div>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" disabled id="submitBtn" class="btn btn-outline-danger">Submit</button>
+        </div>
+    </div>
+    </div>
+   
+
+
+   
+
+   
+   
+<script src="js/popper.min.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
